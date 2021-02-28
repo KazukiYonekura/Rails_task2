@@ -1,0 +1,59 @@
+<div class="profile">
+  <div class="profile-left">
+  	<div class="left-item">
+  	  <ul>
+  	  	<li class="left-menu">
+  	  	  <a href="/users/account">アカウント</a>
+  	  	</li>
+  	  	<li class="left-menu active">
+  	  	  <a href="/users/profile">プロフィール</a>
+  	  	</li>
+  	  </ul>
+  	</div>
+  </div>
+  <div class="profile-right">
+  	<div class="profile-frame">
+  	  <div class="update-content">
+  	  	<div class="row">
+  	  	 <h5>プロフィール</h5>
+  	  	</div>
+  	  </div>
+  	  <div class="update-content">
+  	  	<div class="row">
+  	  	  <div class="profile-image">
+            <% if @user.image_name %>
+  	  	    <img src="<%= "/user_images/#{@user.image_name}" %>" class="icon-image">
+            <% else %>
+            <img src="/user_images/default_icon-9263.jpg" class="icon-image">
+            <% end %>
+  	  	  </div>
+  	  	</div>
+  	  </div>
+      <%= form_tag("/users/profile_update", {multipart: true}) do %>
+  	  <div class="update-content">
+  	  	<div class="row">
+  	  	  <label class="left-label" for="image">アイコン画像</label>
+  	  	  <input class="image-uplode" type="file" name="image_name" id="user_image" placeholder="アイコン画像をアップロード">
+  	  	</div>
+  	  </div>
+  	  <div class="update-content">
+  	  	<div class="row">
+  	  	  <label class="left-label" for="name">名前</label>
+  	  	  <input class="image-uplode profile-textbox" type="text" name="name" id="user_name" placeholder="名前を入力" value="<%= @user.name %>">
+  	  	</div>
+  	  </div>
+  	  <div class="update-content">
+  	  	<div class="row">
+  	  	  <label class="left-label" for="image">自己紹介</label>
+  	  	  <textarea class="image-uplode" placeholder="自己紹介を入力" name="text" id="user_content"><%= @user.text %></textarea>
+  	  	</div>
+  	  </div>
+  	  <div class="update-content">
+  	  	<div class="row">
+  	  	  <input class="profile-submit" type="submit" name="commit" value="更新">
+  	  	</div>
+  	  </div>
+      <% end %>
+  	</div>
+  </div>
+</div>

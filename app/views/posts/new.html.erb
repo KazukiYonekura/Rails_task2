@@ -1,0 +1,57 @@
+<div class="profile">
+  <div class="profile-left">
+  	<div class="left-item">
+  	  <ul>
+  	  	<li class="left-menu active">
+  	  	  <a href="/users/profile">基本情報</a>
+  	  	</li>
+  	  </ul>
+  	</div>
+  </div>
+  <div class="profile-right">
+  	<div class="profile-frame">
+  	  <div class="update-content">
+  	  	<div class="row">
+  	  	 <h5>ルーム情報登録</h5>
+  	  	</div>
+  	  </div>
+      <%= form_tag("/posts/create",{multipart: true}) do %>
+  	  <div class="update-content">
+  	  	<div class="row">
+  	  	  <label class="left-label" for="image">ルーム名</label>
+  	  	  <input class="image-uplode posts-input" type="text" name="name" placeholder="ルーム名を入力">
+  	  	</div>
+  	  </div>
+  	  <div class="update-content">
+  	  	<div class="row">
+  	  	  <label class="left-label" for="name">ルーム紹介</label>
+  	  	  <textarea class="image-uplode" name="text"  placeholder="ルーム説明を入力"></textarea>
+  	  	</div>
+  	  </div>
+  	  <div class="update-content">
+  	  	<div class="row">
+  	  	  <label class="left-label" for="image">料金</label>
+  	  	  <input class="image-uplode posts-input" type="text" name="price" placeholder="1日あたりの料金">
+  	  	</div>
+  	  </div>
+      <div class="update-content">
+        <div class="row">
+          <label class="left-label" for="image">住所</label>
+          <input class="image-uplode posts-input" type="text" name="eria" placeholder="住所を入力">
+        </div>
+      </div>
+      <div class="update-content">
+        <div class="row">
+          <label class="left-label" for="image">ルーム画像</label>
+          <input class="image-uplode posts-input" type="file" name="image" id="user_image" placeholder="ルーム画像をアップロード">
+        </div>
+      </div>
+        <div class="update-content">
+        <div class="row">
+          <input class="profile-submit" type="submit" name="commit" value="登録">
+        </div>
+      </div>
+      <% end %>
+  	</div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="container login">
+  <div class="login-frame">
+  	<div class="login-form">
+  	  <p class= "login-text">新しいアカウントを作成</p>
+      <%= form_tag("/users/create") do %>
+  	  <div class="login-item">
+  	    <input autocomplete="name" name="name" class="login-email" placeholder="ユーザー名">
+  	  </div>
+  	  <div class="login-item">
+        <input autocomplete="email" name="email" class="login-email" placeholder="メールアドレス">
+      </div>
+      <div class="login-item">
+        <input autocomplete="new-password" name="password" type="password" class="login-email" placeholder="パスワード">
+      </div>
+      <div class="login-item">
+        <input autocomplete="new-password" name="rpassword" type="password" class="login-email" placeholder="パスワード確認">
+      </div>
+  	  <div class="login-item">
+  	    <input type="submit" name="commit" value="新しいアカウントを作成" class="btn btn-login">
+  	  </div>
+      <% end %>
+  	  <a href="/users/sign_in">すでにアカウントをお持ちの方はログイン</a>
+  	</div>
+  </div>
+</div>

@@ -3,6 +3,7 @@
   <head>
     <title>TaskApp2</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,6 +12,63 @@
   </head>
 
   <body>
+    <header class="header">
+      <div class="header-left">
+        <a href="/">
+          <%= image_tag "logo.png" %>
+        </a>
+        <%= form_tag("/posts/search", method: :get) do %>
+        <div class="eria-textbox">
+          <input type="text" placeholder="エリア" name="area" class="text-box">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <div class="keyword-textbox">
+          <input type="text" placeholder="キーワード" name="keyword" class="text-box">
+          <i class="fas fa-search"></i>
+        </div>
+        <input type="submit" name="commit" value="" class="d-none">
+        <% end %>
+        <% if @current_user %>
+        <div class="top-menu">
+          <div class="top-one">
+            <%= link_to("ルーム登録", "/posts/new", {method: :get, class: "logout"}) %>
+          </div>
+          <div class="top-one">
+            <%= link_to("ログアウト", "/logout", {method: :post, class: "logout"}) %>
+          </div>
+        </div>
+        <div class="top-menu">
+          <div class="top-one">
+            <%= link_to("予約履歴", "/reservations", {method: :get, class: "logout"}) %>
+          </div>
+          <div class="top-one">
+            <%= link_to("登録履歴", "/posts/posts", {method: :get, class: "logout"}) %>
+          </div>
+        </div>
+        <% end %>
+      </div>
+      <% if @current_user %>
+      <div class="header-right header-right-login">
+        <p class="header-right-name"><%= @current_user.name %></p>
+        <div class="header-right-image">
+          <img src="/user_images/<%= @current_user.image_name %>" class="current-user-image">
+        </div>
+      </div>
+      <% else %>
+      <div class="header-right">
+        <div class="nav-button">
+          <a class="btn btn-login" href="/users/sign_in">ログイン</a>
+          <a class="btn btn-create" href="/users/sign_up">登録する</a>
+        </div>
+      </div>
+      <% end %>
+    </header>
+    <div class="flash">
+      <%= flash[:notice] %>
+    </div>
     <%= yield %>
+    <footer class="footer">
+      <p>© 2020 POTEPAN.INC.</p>
+    </footer>
   </body>
 </html>

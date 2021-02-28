@@ -1,3 +1,22 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get "/" => "home#top"
+  post "users/create" => "users#create"
+  get "users/sign_in" => "users#sign_in"
+  post "login" => "users#login"
+  post "logout" => "users#logout"
+  get "users/sign_up" => "users#sign_up"
+  get "users/profile" => "users#profile"
+  post "users/profile_update" => "users/profile_update"
+  get "users/account" => "users#account"
+  get "users/edit" => "users#edit"
+  post "users/update" => "users#update"
+  get "posts/new" => "posts/new"
+  post "posts/create" => "posts#create"
+  get "posts/search" => "posts#search"
+  get "/posts/posts" => "posts#posts"
+  get "posts/:id" => "posts#show"
+  get "reservations" =>"reservations#home"
+  get "reservations/new" =>"reservations#new"
+  post "reservations/create" => "reservations#create"
+  get "reservations/:id" =>"reservations#show"
 end

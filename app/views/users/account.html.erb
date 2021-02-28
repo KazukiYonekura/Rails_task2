@@ -1,0 +1,40 @@
+<div class="profile">
+  <div class="profile-left">
+  	<div class="left-item">
+  	  <ul>
+  	  	<li class="left-menu active">
+  	  	  <a href="/users/account">アカウント</a>
+  	  	</li>
+  	  	<li class="left-menu">
+  	  	  <a href="/users/profile">プロフィール</a>
+  	  	</li>
+  	  </ul>
+  	</div>
+  </div>
+  <div class="profile-right">
+  	<div class="profile-frame">
+  	  <div class="update-content">
+  	  	<div class="row">
+  	  	 <h5>アカウント</h5>
+  	  	</div>
+  	  </div>
+  	  <div class="update-content">
+  	  	<div class="row">
+          <label class="left-label" for="image">メールアドレス</label>
+          <p class="account-email"><%= @user.email %></p>
+  	  	</div>
+  	  </div>
+  	  <div class="update-content">
+  	  	<div class="row">
+          <label class="left-label" for="image">パスワード</label>
+          <p class="account-email"><%= @user.password %></p>
+  	  	</div>
+  	  </div>
+  	  <div class="update-content">
+  	  	<div class="row">
+  	  	  <a href="/users/edit" class="profile-submit">編集</a>
+  	  	</div>
+  	  </div>
+  	</div>
+  </div>
+</div>

@@ -1,0 +1,185 @@
+.reservations{
+	max-width: 100vw;
+    padding: 30px 60px;
+}
+
+.no-wrap{
+    white-space: nowrap;
+}
+
+.reservations table{
+    width: 100%;
+    text-align: center;
+}
+
+.reservations-h4{
+    font-size: 25px;
+    font-weight: 500;
+	padding-bottom: 15px;
+	margin-bottom: 5px;
+}
+
+.res-thead th{
+    font-size: 13px;
+    padding: 10px 15px;
+}
+
+.res-thead tr{
+	border-top: 1px solid #eaedef;
+    border-bottom: 1px solid #eaedef;
+}
+
+.reservations table tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+.reservations table tbody tr {
+    border-bottom: 1px solid #eaedef;
+}
+
+.reservations table tbody td{
+    font-size: 13px;
+	padding: 10px;
+}
+
+.post-name{
+	font-size: 18px !important;
+	font-weight: bold;
+	color: #909090;
+}
+
+.post-name a{
+	color: #4a90e2;
+    text-decoration: underline;
+}
+
+.tdimage-top{
+	width: 240px;
+    height: 140px;
+    object-fit: cover;
+}
+
+.resevations-new{
+	padding: 30px 0;
+}
+
+.res-box{
+	margin-left: 25%;
+	position: relative;
+	padding: 0 15px;
+}
+
+.reservations-new-nav{
+	padding: 20px;
+    border: 1px solid #eaedef;
+}
+
+.res-new-title{
+    font-size: 20px;
+    font-weight: 500;
+	border-bottom: 1px solid #eaedef;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+.price-icon{
+	margin-bottom: 10px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.reservations-new-date-select{
+	padding: 15px 0;
+}
+
+.reservations-new-date-select label{
+	letter-spacing: 2px;
+    font-size: 14px
+}
+
+.res-form{
+	background-color: #e9ecef;
+    opacity: 1;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    display: block;
+    width: 100%;
+    padding: 7px 10px;
+    line-height: 1.5;
+    color: #495057;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+
+.res-h6{
+	border-bottom: 1px solid #eaedef;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.res-check{
+	border-bottom: 1px solid #eaedef;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    font-size: 15px;
+}
+
+.res-btn{
+	width: 100%;
+	color: #fff;
+    background-color: #4a90e2;
+    border: 1px solid #007bff;
+    margin-bottom: 15px;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.res-btn2{
+	background-color: #6c757d !important;
+    border: 1px solid #6c757d !important;
+}
+
+
+.container-field-user{
+	width: 100%;
+	margin: 20px 0;
+}
+
+.user-view{
+	background-color: #F6F8F9;
+    border-left: 2px solid #e2e2e2;
+    width: 100%;
+}
+
+.user-view-box{
+	max-width: 880px;
+    background-color: #fff;
+    border: 1px solid #eaedef;
+    margin: 30px auto;
+}
+
+.user-view-box>.update-contetnt{
+	border-bottom: 1px solid #eaedef;
+    padding: 20px;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+.user-label{
+    width: 25%;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0 5px;
+	margin-bottom: 5px;
+}
+
+.user-content{
+	width: 75%;
+}
+
+.user-content a{
+	color: #222;
+}

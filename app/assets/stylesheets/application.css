@@ -128,12 +128,13 @@ table{
 .logout{
 	color: #fff;
 	margin-bottom: 40px;
-	margin-left: 20px;
-	font-size: 20px;
+	margin-left: 15px;
+	font-size: 15px;
+	text-align: center;
 }
 
-.top-form2{
-	margin: 0;
+.top-menu{
+	margin-top: 10px;
 }
 
 .current-user-image{

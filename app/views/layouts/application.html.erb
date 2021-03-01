@@ -45,6 +45,11 @@
             <%= link_to("登録履歴", "/posts/posts", {method: :get, class: "logout"}) %>
           </div>
         </div>
+        <div class="top-menu">
+          <div class="top-one">
+            <%= link_to("設定", "/users/account", {method: :get, class: "logout"}) %>
+          </div>
+        </div>
         <% end %>
       </div>
       <% if @current_user %>

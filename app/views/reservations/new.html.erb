@@ -1,0 +1,31 @@
+<div class="container resevations-new">
+  <div class="row">
+    <div class="res-box">
+      <div class="reservations-new-nav">
+        <h4 class="res-new-title">予約内容確認</h4>
+        <h5 class="price-icon">¥<%= @post.price %> / 日</h5>
+        <div class="reservations-new-date-select">
+          <%= form_tag("/reservations/create") do %>
+          <input type="hidden" value="<%= session[:user_id]%>" name="user_id">
+          <input type="hidden" value="<%= params[:room_id] %>" name="room_id">
+          <input type="hidden" value="<%= params[:post_name] %>" name="post_name">
+          <input type="hidden" value="<%= params[:post_text] %>" name="post_text">
+          <label for="start_date">開始日</label>
+          <input class="res-form" readonly="readonly" type="text" name="start_date" value="<%= params[:start_date] %>">
+          <label for="end_date">終了日</label>
+          <input class="res-form" readonly="readonly" type="text" name="end_date" value="<%= params[:end_date] %>">
+          <h6 class="res-h6">使用日数 :<%= @total %></h6>
+          <h6 class="res-h6">人数 :<%= params[:count] %></h6>
+          <label for="total-amount">合計金額</label>
+          <input class="res-form" readonly="readonly" type="text" name="price" value="<%= @total_price %>">
+          <p class="res-check">上記の内容でよろしければ「予約を確定」を押してください</p>
+          <input type="submit" name="commit" value="予約を確定" class="btn res-btn">
+          <% end %>
+          <div>
+          <a class="btn res-btn res-btn2" href="/posts/#{@post.id}">ルーム詳細に戻る</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,176 @@
+.login{
+	padding-top: 35px;
+}
+
+.login-frame{
+    max-width: 600px;
+    text-align: center;
+    padding: 24px;
+    margin: 0px auto;
+    background-color: white;
+    border-radius: 4px
+ }
+
+ .login-text{
+    margin: 15px 0;
+    font-size: 16px;
+ }
+
+ .login-text-edit{
+    margin: 15px 0;
+    font-size: 30px;
+    font-weight: 500;
+ }
+
+.login-form{
+	margin: 0 100px;
+}
+
+.login-item{
+	margin-bottom: 15px;
+}
+
+ .login-email{
+    padding: 5px;
+    width: 100%;
+    font-size: 18px;
+    letter-spacing: 1px;
+ }
+
+ .login-item>.btn-login{
+    width: 100%;
+    border-color: #007bff;
+    border: 1px solid #ced4da
+ }
+
+
+
+/* profile */
+
+.profile{
+    display: flex;
+    width: 100%;
+}
+
+.profile-left{
+    padding: 30px 10px;
+    height: 100vh;
+}
+
+.left-item{
+    padding-left: 40px;
+    margin-bottom: 20px;
+}
+
+.left-item li{
+    padding: 10px;
+    font-size: 18px;
+    white-space: nowrap;
+}
+.left-menu a{
+    color: #222;
+}
+
+.active a{
+    color: #4a90e2;
+}
+
+.active{
+    border-right: 3px solid #4a90e2
+}
+
+.profile-right{
+    position: relative;
+    padding: 0 15px;
+    width: 100%;
+    background-color: #F6F8F9;
+    border-left: 2px solid #e2e2e2;
+}
+
+.profile-frame{
+    margin: 30px 15px;
+    background-color: #fff;
+    border: 1px solid #eaedef;
+    border-radius: 2px;
+}
+
+.update-content{
+    border-bottom: 1px solid #eaedef;
+    padding: 20px;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+h5{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.profile-image{
+    margin-left: 45%;
+}
+
+.icon-image{
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 50px
+}
+
+.left-label{
+    padding: 0 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    width: 25%;
+}
+
+.image-uplode{
+    padding: 0 15px;
+    margin-bottom: 20px;
+    width: 75%;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.profile-textbox{
+    padding: 8px;
+}
+
+.row>textarea{
+    height: 130px;
+}
+
+.profile-submit{
+    width: 20%;
+    background-color: #4a90e2 !important;
+    border: none;
+    font-size: 18px;
+    display: inline-block;
+    text-align: center;
+    font-weight: 400;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px
+}
+
+.login-label{
+    text-align: center;
+    font-size: 1rem;
+}
+
+.login-item-back{
+    border: 1px solid #222;
+    border-radius: 3px;
+}
+
+.btn-back p{
+    color: #4a90e2;
+    font-weight: 500;
+}

@@ -1,0 +1,31 @@
+<div class="container reservations">
+  <h4 class="reservations-h4">予約済みルーム一覧</h4>
+  <table>
+  <thead class="res-thead">
+    <tr>
+      <th>ルーム画像</th>
+      <th class="no-wrap">ルーム名</th>
+      <th class="no-wrap">ルーム紹介</th>
+      <th class="no-wrap">料金</th>
+      <th>作成日</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @post.each do |post| %>
+    <tr>
+      <td>
+        <a href="<%= "/posts/#{post.id}" %>">
+        <img src="/assets/room01.jpg" class="tdimage-top">
+        </a>
+      </td>
+      <td class="post-name">
+        <a href="<%= "/posts/#{post.id}" %>"><%= post.name %></a>
+      </td>
+      <td class="post-text"><%= post.text %></td>
+      <td class="price-icon">¥<%= post.price %></td>
+      <td><%= post.created_at %></td>
+    </tr>
+    <% end %>
+  </tbody>
+  </table>
+</div>

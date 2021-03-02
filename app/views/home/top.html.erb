@@ -1,0 +1,50 @@
+<div class="top">
+  <div class="top-main">
+  	<div class="container">
+  	  <div class="form-area">
+  	  	<div class="form-fream">
+  	  	  <div class="form-box">
+  	  	    <p class="form-text">Potepan Shareでまだ体験<br>したことのない旅をしよう</p>
+  	  	      <label for="area">エリア</label>
+              <%= form_tag("/posts/search", method: :get) do %>
+  	  	      <input type="text" name="area" id="area" class="form-area-textbox" placeholder="東京">
+  	  	      <input type="submit" name="commit" value="探す" class="btn form-area-btn">
+              
+              <% end %>
+  	  	  </div>
+  	  	</div>
+  	  </div>
+  	</div>
+  </div>
+  <div class="container">
+  	<div class="area-content">
+  	  <h1 class="section-title">おすすめのエリア</h1>
+  	  <div class="area-box">
+  	  	<div class="area-box-item">
+  	  	  <span>東京</span>
+  	  	  <a href="/posts/search?area=東京" >
+  	  	  	<img src="/assets/img_tokyo.jpg" class="area-image">
+  	  	  </a>
+  	  	</div>
+  	  	<div class="area-box-item">
+  	  	  <span>大阪</span>
+  	  	  <a href="/posts/search?area=大阪" >
+  	  	  	<img src="/assets/img_osaka.jpg" class="area-image">
+  	  	  </a>
+  	  	</div>
+  	  	<div class="area-box-item">
+  	  	  <span>京都</span>
+  	  	  <a href="/posts/search?area=京都" >
+  	  	  	<img src="/assets/img_kyoto.jpg" class="area-image">
+  	  	  </a>
+  	  	</div>
+  	  	<div class="area-box-item">
+  	  	  <span>札幌</span>
+  	  	  <a href="/posts/search?area=札幌" >
+  	  	  	<img src="/assets/img_sapporo.jpg" class="area-image">
+  	  	  </a>
+  	  	</div>
+  	  </div>
+  	</div>
+  </div>
+</div>
